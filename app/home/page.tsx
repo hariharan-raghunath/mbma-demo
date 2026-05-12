@@ -159,6 +159,69 @@ export default function HomePage() {
             </div>
           </div>
 
+
+           {/* Punch In — coming soon */}
+          <div style={{
+            background: "var(--surface)",
+            border: "1px solid var(--border)",
+            borderRadius: 12,
+            padding: "24px",
+            cursor: "not-allowed",
+            opacity: 0.5,
+            display: "flex",
+            alignItems: "center",
+            gap: 20,
+            position: "relative",
+            overflow: "hidden",
+          }}>
+            {/* Dimmed accent bar */}
+            <div style={{
+              position: "absolute", left: 0, top: 0, bottom: 0,
+              width: 4, background: "var(--border-bright)", borderRadius: "12px 0 0 12px",
+            }} />
+
+            {/* Icon */}
+            <div style={{
+              width: 52, height: 52, borderRadius: 12,
+              background: "var(--surface-3)",
+              border: "1px solid var(--border)",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              flexShrink: 0,
+            }}>
+              <MapPin size={24} color="var(--text-dim)" strokeWidth={1.8} />
+            </div>
+
+            {/* Text */}
+            <div style={{ flex: 1 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                <div className="font-display" style={{ fontSize: 22, color: "var(--text-dim)", lineHeight: 1 }}>
+                  EVENTS
+                </div>
+                <div style={{
+                  background: "var(--surface-3)",
+                  border: "1px solid var(--border)",
+                  borderRadius: 4,
+                  padding: "2px 8px",
+                  fontFamily: "'Barlow Condensed'",
+                  fontSize: 10,
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "var(--text-dim)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 4,
+                }}>
+                  <Lock size={9} /> Coming Soon
+                </div>
+              </div>
+              <p style={{ color: "var(--text-dim)", fontSize: 13, lineHeight: 1.5, margin: 0 }}>
+                Log event details 
+              </p>
+            </div>
+          </div>
+
+
         </div>
 
         {/* Footer note */}
