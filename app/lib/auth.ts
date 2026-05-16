@@ -13,6 +13,14 @@ function parseAllowedEmails(): { email: string; role: string }[] {
 }
 
 function getUserRole(email: string): string | null {
+
+  if (email.endsWith("@mbmusicacademy.org")) {
+    const allowed = parseAllowedEmails();
+    const match = allowed.find((e) => e.email === email);
+    return match ? match.role : "teacher";
+  }
+
+
   const allowed = parseAllowedEmails();
   const match = allowed.find((e) => e.email === email);
   return match ? match.role : null;
@@ -48,3 +56,6 @@ export const authOptions: NextAuthOptions = {
     error: "/login",
   },
 };
+
+
+// @mbmusicacademy.org
